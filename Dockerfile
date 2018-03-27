@@ -16,6 +16,9 @@ RUN apt-get install -y kubectl
 ##Copy Deploy Script
 COPY ./deploy_g8s.sh /base/deploy_g8s.sh
 
+##Copy Gcloud Key
+COPY ./gcloud_key.json /base/gcloud_key.json
+
 ## Make deploy script executable
 RUN chmod +x /base/deploy_g8s.sh
 
