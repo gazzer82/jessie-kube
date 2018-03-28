@@ -19,4 +19,4 @@ COPY ./deploy_g8s.sh /deploy_g8s.sh
 ## Make deploy script executable
 RUN chmod +x /deploy_g8s.sh
 
-CMD ["/deploy_g8s.sh"]
+ENTRYPOINT ["/bin/bash /deploy_g8s.sh"]
