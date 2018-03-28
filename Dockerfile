@@ -14,12 +14,9 @@ RUN export CLOUD_SDK_REPO="cloud-sdk-$(echo jessie)" && \
 RUN apt-get install -y kubectl
 
 ##Copy Deploy Script
-COPY ./deploy_g8s.sh /base/deploy_g8s.sh
-
-##Copy Gcloud Key
-COPY ./gcloud_key.json /base/gcloud_key.json
+COPY ./deploy_g8s.sh /deploy_g8s.sh
 
 ## Make deploy script executable
-RUN chmod +x /base/deploy_g8s.sh
+RUN chmod +x /deploy_g8s.sh
 
-CMD ["/base/deploy_g8s.sh"]
+CMD ["/deploy_g8s.sh"]
